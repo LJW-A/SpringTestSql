@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cn</groupId>
+    <artifactId>SpringTestSql</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.0.RELEASE</version>
+    </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.SR1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+ <dependencies>
+
+     <!--web访问-->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-web</artifactId>
+     </dependency>
+     <!--安全框架-->
+     <!--<dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-security</artifactId>
+     </dependency>-->
+     <!--页面调用-->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-thymeleaf</artifactId>
+     </dependency>
+     <!--test测试-->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-test</artifactId>
+         <version>2.1.0.RELEASE</version>
+         <scope>test</scope>
+     </dependency>
+     <!--test测试-->
+     <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>4.13</version>
+         <scope>test</scope>
+     </dependency>
+
+     <!--Mybatis-->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-test</artifactId>
+     </dependency>
+
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-jdbc</artifactId>
+     </dependency>
+
+     <!--mysql-->
+     <dependency>
+         <groupId>mysql</groupId>
+         <artifactId>mysql-connector-java</artifactId>
+         <version>5.1.47</version>
+     </dependency>
+     <!--drulid 连接池-->
+     <dependency>
+         <groupId>com.alibaba</groupId>
+         <artifactId>druid</artifactId>
+         <version>1.0.9</version>
+     </dependency>
+     <dependency>
+         <groupId>org.projectlombok</groupId>
+         <artifactId>lombok</artifactId>
+
+     </dependency>
+     <!--自动识别 application.properties 文件 间将这些文件 它会自动创建使用该DataSource的SqlSessionFactoryBean以及SqlSessionTemplate。
+     会自动扫描你的Mappers，连接到SqlSessionTemplate，并注册到Spring上下文中。-->
+     <dependency>
+         <groupId>org.mybatis.spring.boot</groupId>
+         <artifactId>mybatis-spring-boot-starter</artifactId>
+         <version>2.1.0</version>
+     </dependency>
+
+     <!--热启动-->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-devtools</artifactId>
+     </dependency>
+     <!--test 测试-->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-test</artifactId>
+     </dependency>
+     <dependency>
+         <groupId>com.github.pagehelper</groupId>
+         <artifactId>pagehelper-spring-boot-starter</artifactId>
+         <version>1.2.5</version>
+     </dependency>
+
+     <!--Jpa-->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-data-jpa</artifactId>
+     </dependency>
+
+     <!--七牛云云的包-->
+     <!--<dependency>
+         <groupId>com.qiniu</groupId>
+         <artifactId>qiniu-java-sdk</artifactId>
+         <version>[7.4.0, 7.4.99]</version>
+     </dependency>-->
+
+     <!--转换为json格式-->
+     <dependency>
+         <groupId>com.google.code.gson</groupId>
+         <artifactId>gson</artifactId>
+     </dependency>
+
+     <!--转换器-->
+     <dependency>
+         <groupId>org.modelmapper</groupId>
+         <artifactId>modelmapper</artifactId>
+         <version>1.1.0</version>
+     </dependency>
+
+     <!--redis整合-->
+     <!--<dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-data-redis</artifactId>
+     </dependency>-->
+
+     <!--将session存储到Redis中 的包-->
+     <!--<dependency>
+         <groupId>org.springframework.session</groupId>
+         <artifactId>spring-session-data-redis</artifactId>
+     </dependency>-->
+
+     <!--谷歌工具包-->
+     <dependency>
+         <groupId>com.google.guava</groupId>
+         <artifactId>guava</artifactId>
+         <version>21.0</version>
+     </dependency>
+
+     <dependency>
+         <groupId>com.alibaba</groupId>
+         <artifactId>fastjson</artifactId>
+         <version>1.2.28</version>
+     </dependency>
+
+
+     <dependency>
+         <groupId>org.springframework.cloud</groupId>
+         <artifactId>spring-cloud-commons</artifactId>
+         <version>2.0.0.RELEASE</version>
+     </dependency>
+
+
+
+
+     <!--eureka的客户端 使用这个时候在启动类的前面加上注解  @EnableEurekaClient才能被识别到-->
+     <dependency>
+         <groupId>org.springframework.cloud</groupId>
+         <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+     </dependency>
+     <!--Ribbon 负载均衡  结合FeignClient 进行服务间的调用 默认是论查询的原则-->
+     <dependency>
+         <groupId>org.springframework.cloud</groupId>
+         <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+     </dependency>
+
+     <!--FeignClient 的依赖架包-->
+     <dependency>
+         <groupId>org.springframework.cloud</groupId>
+         <artifactId>spring-cloud-starter-openfeign</artifactId>
+     </dependency>
+     <!--hystrix 依赖架包  熔断机制 防止造成雪崩-->
+     <dependency>
+         <groupId>org.springframework.cloud</groupId>
+         <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+     </dependency>
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-actuator</artifactId>
+     </dependency>
+     <!--Springboot Admin 架包就是服务监控使用的-->
+     <dependency>
+         <groupId>de.codecentric</groupId>
+         <artifactId>spring-boot-admin-starter-client</artifactId>
+         <version>2.1.0</version>
+     </dependency>
+
+
+     <!--Eureka客户端的架包-->
+     <dependency>
+         <groupId>org.springframework.cloud</groupId>
+         <artifactId>spring-cloud-netflix-eureka-client</artifactId>
+     </dependency>
+
+     <!--ribbon 负载均衡-->
+     <dependency>
+         <groupId>org.springframework.cloud</groupId>
+         <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+     </dependency>
+     <!-- feignClient 服务间的调用的架包-->
+     <dependency>
+         <groupId>org.springframework.cloud</groupId>
+         <artifactId>spring-cloud-starter-openfeign</artifactId>
+     </dependency>
+     <!--actuator 服务健康管理的架包 -->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-actuator</artifactId>
+     </dependency>
+     <!--服务监控 的客户端的架包 actuator 就是SpringAdmin 的客户端-->
+     <dependency>
+         <groupId>de.codecentric</groupId>
+         <artifactId>spring-boot-admin-starter-client</artifactId>
+         <version>2.1.0</version>
+     </dependency>
+
+     <!--Redis 相关的包-->
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-data-redis</artifactId>
+     </dependency>
+
+
+     <dependency>
+         <groupId>redis.clients</groupId>
+         <artifactId>jedis</artifactId>
+         <version>3.0.1</version>
+     </dependency>
+
+     <!--基于Jwt 生成的token-->
+     <dependency>
+        <groupId>com.auth0</groupId>
+        <artifactId>java-jwt</artifactId>
+         <version>3.8.0</version>
+     </dependency>
+
+     <dependency>
+         <groupId>com.alibaba</groupId>
+         <artifactId>fastjson</artifactId>
+         <version>1.2.47</version>
+     </dependency>
+
+ </dependencies>
+
+
+</project>
